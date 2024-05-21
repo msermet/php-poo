@@ -92,10 +92,13 @@ class Phrase {
     public function getNombreVoyelles(): int
     {
         $nbVoyelles=0;
-        $caracteres = str_split($this->phrase);
+        $voyelles=["a","e","y","u","i","o"];
+        $caracteres = str_split(strtolower($this->phrase));
         foreach ($caracteres as $caractere) {
-            if ($caractere=="a"||"e"||"y"||"u"||"i"||"o") {
-                $nbVoyelles++;
+            foreach ($voyelles as $voyelle) {
+                if ($caractere==$voyelle) {
+                    $nbVoyelles++;
+                }
             }
         }
         return $nbVoyelles;
