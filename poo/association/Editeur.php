@@ -14,5 +14,21 @@ class Editeur {
         $this->ville = $ville;
     }
 
+    /**
+     * @return string
+     */
+    public function getNom(): string
+    {
+        return $this->nom;
+    }
+
+    /**
+     * @return string
+     */
+    public function getVille(): string
+    {
+        return $this->ville;
+    }
+
 
 }
